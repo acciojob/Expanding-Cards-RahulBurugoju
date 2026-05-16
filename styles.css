@@ -1,1 +1,45 @@
 /*  your css code here. If applicable */
+body{
+	box-sizing:border-box;
+	margin:0px;
+	padding:0px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	
+}
+
+.container{
+	display:flex;
+	 width: 90vw;
+}
+.panel{
+	background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+	height:80vh;
+	flex-grow:1;
+	margin:10px;
+	border-radius:15px;
+	position:relative;
+	transition: flex-grow 0.7s  ease-in;
+}
+.panel.active{
+	flex-grow:6;
+}
+
+.img-text{
+	position: absolute;
+      bottom: 10px;
+      left: 20px;
+      font-size: 15px;
+	 color:white;
+      opacity: 0;
+	padding:10px
+}
+.panel.active .img-text {
+      opacity: 1;
+      transition: opacity 0.3s ease-in 0.4s;
+    }	
+}
